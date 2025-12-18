@@ -58,4 +58,3 @@ else
 fi
 
 echo "Parámetros válidos totales en PG$PG_VERSION: $(echo "$VALID_PARAMS" | wc -l)" | tee -a "$LOG_FILE"
-VALIDATE
