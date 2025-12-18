@@ -11,7 +11,7 @@ echo "Fecha: $(date)" | tee -a "$LOG_FILE"
 
 # 1. Obtener parámetros válidos de PostgreSQL 17
 echo "Obteniendo parámetros válidos para PostgreSQL $PG_VERSION..." | tee -a "$LOG_FILE"
-VALID_PARAMS=$(sudo -u postgres psql -p 5433 -t -c "SELECT name FROM pg_settings ORDER BY name;" 2>/dev/null)
+VALID_PARAMS=$(sudo -u postgres psql -p 5432 -t -c "SELECT name FROM pg_settings ORDER BY name;" 2>/dev/null)
 
 if [ -z "$VALID_PARAMS" ]; then
     echo "ERROR: No se puede conectar a PostgreSQL $PG_VERSION" | tee -a "$LOG_FILE"
