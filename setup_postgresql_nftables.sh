@@ -35,7 +35,7 @@ define MON_PORT = 9090
 table inet filter {
     set trusted_ipv4 {
         type ipv4_addr; flags interval;
-        elements = { 127.0.0.1, 192.168.1.0/24 }
+        elements = { 127.0.0.1, 192.168.143.0/24 }
     }
     set trusted_ipv6 {
         type ipv6_addr; flags interval;
