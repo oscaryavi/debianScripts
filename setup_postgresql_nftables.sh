@@ -11,7 +11,7 @@ NFT_FILE="/etc/nftables.conf"
 BACKUP_DIR="/root/nftables_backup_$(date +%Y%m%d_%H%M%S)"
 
 log()  { echo "[$(date '+%F %T')] $*"; }
-abort(){ log "ERROR-OSCAR: $*"; exit 1; }
+abort(){ log "ERROR: $*"; exit 1; }
 
 [[ $EUID -eq 0 ]] || abort "Ejecutar como root"
 command -v nft >/dev/null || { apt-get update -qq && apt-get install -y nftables fail2ban rsyslog; }
