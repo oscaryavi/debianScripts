@@ -6,7 +6,7 @@ PG_VERSION="17"
 CONFIG_FILE="/etc/postgresql/$PG_VERSION/main/postgresql.conf"
 LOG_FILE="/var/log/pg_config_validation.log"
 
-echo "=== VALIDACIÓN CONFIGURACIÓN POSTGRESQL $PG_VERSION ===" | tee -a "$LOG_FILE"
+echo "=== nueva VALIDACIÓN CONFIGURACIÓN POSTGRESQL $PG_VERSION ===" | tee -a "$LOG_FILE"
 echo "Fecha: $(date)" | tee -a "$LOG_FILE"
 
 # 1. Obtener parámetros válidos de PostgreSQL 17
