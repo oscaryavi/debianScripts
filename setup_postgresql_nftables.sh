@@ -8,7 +8,7 @@ PG_PORT=5432
 PGB_PORT=6432
 MON_PORT=9090
 TRUSTED_NET_IPV4="192.168.143.0/24"
-TRUSTED_NET_IPV6="fd00::/64"   # cámbialo o déjalo vacío si no usas IPv6
+TRUSTED_NET_IPV6=""   # cámbialo o déjalo vacío si no usas IPv6
 NFT_FILE="/etc/nftables.conf"
 BACKUP_DIR="/root/nftables_backup_$(date +%Y%m%d_%H%M%S)"
 
