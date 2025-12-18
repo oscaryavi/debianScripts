@@ -14,7 +14,7 @@ set -euo pipefail
 PG_PORT=5432
 PGB_PORT=6432
 
-TRUSTED_IPV4="192.168.143.0/24"
+TRUSTED_IPV4="192.168.1.0/24"
 TRUSTED_IPV6="fd00::/64"
 
 BACKUP_DIR="/root/nftables_backup_$(date +%Y%m%d_%H%M%S)"
