@@ -14,7 +14,7 @@ echo "Obteniendo parámetros válidos para PostgreSQL $PG_VERSION..." | tee -a "
 VALID_PARAMS=$(sudo -u postgres psql -p 5432 -t -c "SELECT name FROM pg_settings ORDER BY name;" 2>/dev/null)
 
 if [ -z "$VALID_PARAMS" ]; then
-    echo "ERROR: No se puede conectar a PostgreSQL $PG_VERSION" | tee -a "$LOG_FILE"
+    echo "ERROR-nuevo: No se puede conectar a PostgreSQL $PG_VERSION" | tee -a "$LOG_FILE"
     exit 1
 fi
 
